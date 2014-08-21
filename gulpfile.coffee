@@ -6,6 +6,9 @@ coffee = require('gulp-coffee')
 bump = require('gulp-bump')
 bowerDownload = require('gulp-bower')
 bowerFiles = require('main-bower-files')
+concat = require('gulp-concat')
+minify = require('gulp-minify-css')
+uglify = require('gulp-uglifyjs')
 
 paths =
   source:
@@ -19,6 +22,12 @@ paths =
   cache:
     root: '.build'
     bower: '.build/bower_components'
+  bower:
+    fancyBox:
+      root: '.build/bower_components/fancybox'
+      js: ['.build/bower_components/fancybox/source/jquery.fancybox.js', '.build/bower_components/fancybox/source/helpers/*.js' ]
+      css: ['.build/bower_components/fancybox/source/jquery.fancybox.css', '.build/bower_components/fancybox/source/helpers/*.css']
+      images: ['.build/bower_components/fancybox/source/**.gif','.build/bower_components/fancybox/source/**.png']
   dest:
     root: '.'
     scripts: 'scripts'
@@ -41,7 +50,20 @@ gulp.task 'bump', ['build'], ->
 gulp.task 'build:bower:download', ->
   bowerDownload(paths.cache.bower)
 
-gulp.task 'build:bower', ['build:bower:download'], ->
+gulp.task 'build:bower:packages:fancybox', ->
+  gulp.src paths.bower.fancyBox.images
+      .pipe gulp.dest paths.dest.fancybox
+
+  gulp.src paths.bower.fancyBox.js
+      .pipe uglify('jquery.fancybox.js')
+      .pipe gulp.dest paths.dest.fancybox
+
+  gulp.src paths.bower.fancyBox.css
+    .pipe concat('fancybox.css')
+    .pipe minify()
+    .pipe gulp.dest paths.dest.fancybox
+
+gulp.task 'build:bower', ['build:bower:download', 'build:bower:packages:fancybox'], ->
   gulp.src bowerFiles(), base: paths.cache.bower
       .pipe gulp.dest paths.dest.source
 
