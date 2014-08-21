@@ -1,12 +1,32 @@
 {
-  "name": "hexo-theme-landscape",
-  "version": "0.0.1",
+  "name": "landscape",
+  "version": "0.1.0",
+  "description": "A deeply customized landscape theme from Hexo",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timnew/landscape.git"
+  },
+  "keywords": [
+    "hexo",
+    "landscape",
+    "theme",
+    "timnew"
+  ],
+  "author": "timnew <timnew.wti@gmail.com> (https://timnew.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timnew/landscape/issues"
+  },
+  "homepage": "https://github.com/timnew/landscape",
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "load-grunt-tasks": "~0.2.0",
-    "grunt-git": "~0.2.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.4.1"
+    "coffee-script": "^1.7.1",
+    "del": "^0.1.2",
+    "gulp": "^3.8.7",
+    "gulp-bower": "0.0.6",
+    "gulp-bump": "^0.1.11",
+    "gulp-coffee": "^2.1.1",
+    "main-bower-files": "^1.0.4",
+    "yargs": "^1.3.1"
   }
 }
