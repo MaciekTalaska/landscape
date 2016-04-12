@@ -19,7 +19,7 @@ html, body, #container
   height: 100%
 
 body
-  background: texture-background color-background
+  background: color-background
   font: font-size font-sans
   -webkit-text-size-adjust: 100%
 
@@ -55,7 +55,7 @@ body
   left: 0
   transition: 0.2s ease-out
   z-index: 1
-  background: texture-background color-background
+  background: color-background
   .mobile-nav-on &
     left: mobile-nav-width
 
@@ -65,8 +65,9 @@ if sidebar and sidebar isnt bottom
       column(main-column)
 
 if sidebar is left
-  #main
-    float: right
+  @media mq-normal
+    #main
+      float: right
 
 @import "_extend"
 @import "_partial/header"
