@@ -23,6 +23,9 @@
         <%- post.content %>
       <% } %>
     </div>
+    <div class="article-category-footer">
+      <%- partial('post/category') %>
+    </div>
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       <% if (post.comments && config.disqus_shortname){ %>
