@@ -7,7 +7,6 @@
   categoryRibbonFilter = function(data, callback) {
     var categoryConfig, ref, ribbon;
     if (data.categories == null) {
-      //return callback();
       return "";
     }
     if (data.ribbon == null) {
@@ -24,31 +23,9 @@
       t = u
     }
 
-    if (typeof data.ribbon === 'string') {
-      data.ribbon = {
-        text: t
-      };
-    }
     ribbon = data.ribbon;
-    if (ribbon.text == null) {
-      ribbon.text = t
-      ribbon.link = l
-    }
-    categoryConfig = (ref = hexo.config.category_ribbon) != null ? ref[ribbon.text] : void 0;
-    if (categoryConfig) {
-      if (typeof categoryConfig === 'string') {
-        if (categoryConfig.match(colorRegex)) {
-          ribbon.color = categoryConfig;
-        } else {
-          ribbon.style = categoryConfig;
-        }
-      } else {
-        ribbon.style = categoryConfig.style;
-        ribbon.color = categoryConfig.color;
-      }
-    } else {
-      console.log("Unknown Category: " + ribbon.text);
-    }
+    ribbon.text = t;
+    ribbon.link = l;
   };
 
   hexo.extend.filter.register('before_post_render', categoryRibbonFilter);
