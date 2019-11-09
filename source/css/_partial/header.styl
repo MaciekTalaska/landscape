@@ -107,12 +107,14 @@ $nav-link
   cursor: pointer
   &:before
     nav-link-shadow()
+  font-size: large
 
 .main-nav-link
   @extend $nav-link
   nav-link-shadow()
   font-weight: 300
   letter-spacing: 1px
+  font-size: large
 
   @media mq-mobile
     display: none
@@ -135,6 +137,18 @@ $nav-link
 #nav-search-btn
   &:before
     content: "\f002"
+
+#nav-twitter-link
+  &:before
+    content: "\f099"
+
+#nav-github-link
+  &:before
+    content: "\f09b"
+
+#nav-linkedin-link
+  &:before
+    content: "\f0e1"
 
 #search-form-wrap
   position: absolute

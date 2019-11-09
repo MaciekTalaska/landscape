@@ -16,7 +16,11 @@
         <a id="main-nav-toggle" class="nav-icon"></a>
         <% for (var i in theme.menu){ %>
           <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-        <% } %>
+          <% } %>
+          <a class="main-nav-link" target="_blank" href="https://twitter.com/MaciekTalaska"><i class="fa-twitter" title="follow our twitter account to stay up to date!"></i></a>
+          <a class="nav-icon" id="nav-twitter-link" target="_blank" href="https://twitter.com/MaciekTalaska" title="my twitter account"></a>        
+          <a class="nav-icon" id="nav-github-link" target="_blank" href="https://github.com/MaciekTalaska" title="my gihub repo"></a>        
+          <a class="nav-icon" id="nav-linkedin-link" target="_blank" href="https://linkedin.com/in/mtalaska" title="My LinkedIn profile"></a>        
       </nav>
       <nav id="sub-nav">
         <% if (theme.rss){ %>
