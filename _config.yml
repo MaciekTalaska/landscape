@@ -2,7 +2,8 @@
 menu:
   Home: /
   Archives: /archives/
-rss: //feeds.feedburner.com/timnewtech/
+  About Me: /about
+rss: /atom.xml 
 
 # Content
 excerpt_link: Read More
@@ -28,10 +29,10 @@ archive_type: 'monthly'
 show_count: true
 
 # Miscellaneous
-google_analytics: UA-30567867-1
+#google_analytics: UA-30567867-1
 favicon: true
 twitter: MaciekTalaska
-google_plus: 108780866821209046829
+#google_plus: 108780866821209046829
 fb_admins:
 fb_app_id:
 
