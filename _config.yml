@@ -12,8 +12,8 @@ fancybox: true
 sidebar: right
 widgets:
 - recent_posts
-- category
 - archive
+- category
 - tagcloud
 - tag
 
@@ -25,12 +25,12 @@ index_widgets:
 
 # widget behavior
 archive_type: 'monthly'
-show_count: false
+show_count: true
 
 # Miscellaneous
 google_analytics: UA-30567867-1
 favicon: true
-twitter: timnew
+twitter: MaciekTalaska
 google_plus: 108780866821209046829
 fb_admins:
 fb_app_id:
