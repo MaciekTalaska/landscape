@@ -6,7 +6,7 @@ menu:
 rss: /atom.xml 
 
 # Content
-excerpt_link: Read More
+excerpt_link: false 
 fancybox: true
 
 # Sidebar
@@ -32,8 +32,12 @@ show_count: true
 #google_analytics: UA-30567867-1
 favicon: true
 twitter: MaciekTalaska
+linkedin: mtalaska
+github: MaciekTalaska
 #google_plus: 108780866821209046829
-fb_admins:
-fb_app_id:
+#fb_admins:
+#fb_app_id:
 
 recent_posts: 10
+archive_count: 50
+index_generator.per_page: 0
