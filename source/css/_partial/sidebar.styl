@@ -31,20 +31,16 @@ else
 
 $item
   border-radius: 2px
-  material-hover-z-index: 1
   padding: 2px 5px
+  text-decoration: none
 
 $li-item
   @extend $item
-  a:hover
-    text-decoration: none
 
 $a-item
   @extend $item
   &:before
     color: color-grey
-  &:hover
-    text-decoration: none
 
 .tagcloud a
   @extend $a-item    
