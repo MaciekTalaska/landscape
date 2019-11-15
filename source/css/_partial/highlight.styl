@@ -1,5 +1,5 @@
 // https://github.com/chriskempson/tomorrow-theme
-highlight-background = #fafafa
+highlight-background = color-code-background
 highlight-current-line = #393939
 highlight-selection = #515151
 highlight-foreground = darkslategray
@@ -16,7 +16,7 @@ $code-block
   background: highlight-background
   margin: 0 article-padding * -1
   padding: 15px article-padding
-  border-style: solid
+  border-style: none
   border-color: color-border
   border-width: 1px
   overflow: auto
@@ -34,7 +34,7 @@ $line-numbers
     font-family: font-mono
   code
     background: highlight-background
-    color: coral
+    color: color-code
     padding: 0 0.3em
   pre
     @extend $code-block
@@ -60,6 +60,7 @@ $line-numbers
       color: highlight-comment
       line-height: 1em
       margin-bottom: 1em
+      font-family: mono
       a
         float: right
     .gutter pre
@@ -72,15 +73,14 @@ $line-numbers
       background: highlight-selection
   .gist
     margin: 0 article-padding * -1
-    border-style: solid
+    border-style: none
     border-color: color-border
     border-width: 1px 
     background: highlight-background
     padding: 15px article-padding 15px 0
-    color: darkslategray
+    color: highlight-foreground
     margin: 10px
     border-radius: 5px
-    background: #fafafa
     .gist-file
       border: none
       font-family: font-mono
@@ -99,6 +99,7 @@ $line-numbers
         margin: 0
         padding: 0
         border: none
+        background: highlight-background
       .gist-meta
         background: highlight-background
         color: highlight-comment
